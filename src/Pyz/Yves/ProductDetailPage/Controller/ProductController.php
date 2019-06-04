@@ -13,11 +13,13 @@ use SprykerShop\Yves\ProductDetailPage\Controller\ProductController as SprykerSh
 use Symfony\Component\HttpFoundation\Request;
 
 use Spryker\Shared\Storage\StorageConstants;
+use Pyz\Yves\Application\Controller\AbstractController;
 
 /**
  * @method \Spryker\Client\Product\ProductClientInterface getClient()
  */
-class ProductController extends SprykerShopProductController
+#class ProductController extends SprykerShopProductController
+class ProductController extends AbstractController
 {
     public const STORAGE_CACHE_STRATEGY = StorageConstants::STORAGE_CACHE_STRATEGY_REPLACE;
 
