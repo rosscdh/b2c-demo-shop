@@ -12,11 +12,15 @@ use Generated\Shared\Transfer\QuoteTransfer;
 use SprykerShop\Yves\ProductDetailPage\Controller\ProductController as SprykerShopProductController;
 use Symfony\Component\HttpFoundation\Request;
 
+use Spryker\Shared\Storage\StorageConstants;
+
 /**
  * @method \Spryker\Client\Product\ProductClientInterface getClient()
  */
 class ProductController extends SprykerShopProductController
 {
+    public const STORAGE_CACHE_STRATEGY = StorageConstants::STORAGE_CACHE_STRATEGY_REPLACE;
+
     /**
      * @param array $productData
      * @param \Symfony\Component\HttpFoundation\Request $request
